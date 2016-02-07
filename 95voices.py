@@ -7,7 +7,7 @@ import random
 from sys import argv
 
 usage = '''Usage:
-./95voices.py "This is a coherent sentence." \\
+%s "This is a coherent sentence." \\
   "Here comes another meaningful thought." \\
   "3 The melody of tetris, three times." \\
   "1 That makes six simultaneous thoughts!"'''
@@ -46,7 +46,7 @@ def interleave_sentences(args):
 
 def main(argv):
     if len(argv) < 2:
-        print usage
+        print usage % argv[0]
         exit(1)
     print " ".join(interleave(splitode_all(argv[1:])))
 
